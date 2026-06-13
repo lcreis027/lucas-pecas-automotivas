@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 2rem;
+    margin: 40px 0 30px;
+    color: #d32f2f;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #b71c1c;
+}
+
+.menu {
+    background-color: #212121;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.lista-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.lista-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.3s;
+}
+
+.lista-menu a:hover, .lista-menu a.ativo {
+    color: #f57c00;
+    border-bottom: 2px solid #f57c00;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.banner-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.banner-texto p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.diferenciais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.card-diferencial {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.card-produto {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.card-produto img {
+    height: 180px;
+    object-fit: contain;
+    margin: 15px 0;
+}
+
+.card-produto h3 {
+    color: #212121;
+    margin: 10px 0;
+}
+
+.preco {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #d32f2f;
+    margin: 10px 0;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.sobre-imagem {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.contato-dados {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contato-dados p {
+    margin: 12px 0;
+    font-size: 1.1rem;
+}
+
+.formulario {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.grupo-campo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.mensagem-erro {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+}
+
+footer {
+    background-color: #212121;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+@media (max-width: 768px) {
+    .lista-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .lista-menu.ativo {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .banner-texto h1 {
+        font-size: 2rem;
+    }
+
+    .sobre-conteudo, .contato-conteudo {
+        grid-template-columns: 1fr;
+    }
+}

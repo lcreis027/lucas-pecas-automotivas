@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a Lucas Peças Automotivas. Faça seu orçamento, tire dúvidas ou solicite uma peça. Atendimento de segunda a sexta.">
+    <meta name="keywords" content="contato, orçamento, telefone, endereço, peças automotivas, fale conosco">
+    <meta name="author" content="Lucas Peças Automotivas">
+    <title>Contato | Lucas Peças Automotivas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo Lucas Peças" width="120">
+        </div>
+        <ul class="lista-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="contato.html" class="ativo">Contato</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <main class="container">
+        <h2 class="titulo-secao">Fale Conosco</h2>
+        <div class="contato-conteudo">
+            <div class="contato-dados">
+                <h3>Informações</h3>
+                <p><strong>Endereço:</strong> Av. Principal, 123 - Centro, Vitória - ES</p>
+                <p><strong>Telefone/WhatsApp:</strong> (27) 99999-9999</p>
+                <p><strong>E-mail:</strong> contato@lucaspecas.com.br</p>
+                <p><strong>Horário:</strong> Seg-Sex: 8h às 18h | Sáb: 8h às 12h</p>
+            </div>
+
+            <form id="form-contato" class="formulario">
+                <div class="grupo-campo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome">
+                    <div class="mensagem-erro" id="erro-nome"></div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                    <div class="mensagem-erro" id="erro-email"></div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone">
+                    <div class="mensagem-erro" id="erro-telefone"></div>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="mensagem">Mensagem / Peça que procura:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                    <div class="mensagem-erro" id="erro-mensagem"></div>
+                </div>
+
+                <button type="submit" class="botao">Enviar Mensagem</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Lucas Peças Automotivas | Todos os direitos reservados</p>
+            <p>Av. Principal, 123 - Centro, Vitória - ES | Tel: (27) 99999-9999</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
